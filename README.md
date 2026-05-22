@@ -172,7 +172,7 @@ Transforms academic documentation into:
 
 ## 🌍 Live Deployment
 
-https://webugbusters-amuhacks5-0.onrender.com/
+https://bridge-ai-career.onrender.com/
 ---
 
 ## 📊 Example Output
