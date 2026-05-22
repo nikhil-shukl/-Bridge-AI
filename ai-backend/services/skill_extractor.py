@@ -1,6 +1,6 @@
 from langchain_openai import ChatOpenAI
 from langchain_core.prompts import ChatPromptTemplate
-from core.config import OPENAI_API_KEY
+from core.config import require_openai_api_key
 import json
 
 
@@ -9,7 +9,7 @@ def extract_skills_with_evidence(vectorstore, chunks):
     llm = ChatOpenAI(
         model="gpt-4o-mini",
         temperature=0,
-        openai_api_key=OPENAI_API_KEY
+        openai_api_key=require_openai_api_key()
     )
 
     document_text = "\n".join(chunks)

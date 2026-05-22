@@ -4,7 +4,7 @@ import Sidebar from "./SidebarTemp";
 
 const Layout = () => {
   return (
-    <div className="flex bg-[#020617] min-h-screen">
+    <div className="flex bg-slate-50 min-h-screen">
       <Sidebar />
       <main className="flex-1 ml-64 transition-all duration-300">
         <Outlet />

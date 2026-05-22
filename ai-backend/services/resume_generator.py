@@ -1,5 +1,6 @@
 from langchain_openai import ChatOpenAI
 from langchain_core.messages import HumanMessage
+from core.config import require_openai_api_key
 import json
 import re
 
@@ -7,7 +8,8 @@ def generate_verified_resume(analysis_data):
 
     llm = ChatOpenAI(
         model="gpt-4o-mini",
-        temperature=0.35
+        temperature=0.35,
+        openai_api_key=require_openai_api_key()
     )
 
     prompt = f"""

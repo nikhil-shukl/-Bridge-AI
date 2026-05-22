@@ -1,5 +1,6 @@
 from langchain_openai import ChatOpenAI
 from langchain_core.messages import HumanMessage
+from core.config import require_openai_api_key
 import json
 
 
@@ -7,7 +8,8 @@ def mentor_ai(question, analysis):
 
     llm = ChatOpenAI(
         model="gpt-4o-mini",
-        temperature=0.3
+        temperature=0.3,
+        openai_api_key=require_openai_api_key()
     )
 
     # Convert analysis to clean JSON string

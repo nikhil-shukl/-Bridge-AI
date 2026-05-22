@@ -112,16 +112,16 @@ const LandingPage = () => {
   // Team data
   const team = [
     {
-      name: "Jidnyesh Badgujar",
-      role: "Full Stack Developer",
-      avatar: "https://i.im.ge/2026/02/11/eNa3gT.Screenshot-2026-02-11-115020.png",
+      name: "Nikhil Shukla",
+      role: "AI/ML Engineer & Backend Lead",
+      avatar: "https://i.im.ge/2026/02/11/eNax00.Screenshot-2026-02-11-115028.png",
       github: "#",
       linkedin: "#"
     },
     {
-      name: "Nikhil Shukla",
-      role: "AI/ML Engineer & Backend Lead",
-      avatar: "https://i.im.ge/2026/02/11/eNax00.Screenshot-2026-02-11-115028.png",
+      name: "Jidnyesh Badgujar",
+      role: "Full Stack Developer",
+      avatar: "https://i.im.ge/2026/02/11/eNa3gT.Screenshot-2026-02-11-115020.png",
       github: "#",
       linkedin: "#"
     }

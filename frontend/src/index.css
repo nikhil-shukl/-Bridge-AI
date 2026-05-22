@@ -10,32 +10,30 @@
   }
   
   body {
-    @apply bg-[#020617] text-slate-200 min-h-screen font-sans antialiased;
+    @apply bg-slate-50 text-slate-900 min-h-screen font-sans antialiased;
     font-family: 'Inter', system-ui, sans-serif;
-    background-image: 
-      radial-gradient(circle at 100% 0%, rgba(139, 92, 246, 0.03) 0%, transparent 50%),
-      radial-gradient(circle at 0% 100%, rgba(34, 211, 238, 0.03) 0%, transparent 50%);
+    background-image: linear-gradient(180deg, #ffffff 0%, #f8fafc 46%, #eef6ff 100%);
   }
 
   ::-webkit-scrollbar {
     width: 8px;
   }
   ::-webkit-scrollbar-track {
-    @apply bg-[#020617];
+    @apply bg-slate-100;
   }
   ::-webkit-scrollbar-thumb {
-    @apply bg-slate-700 rounded-full hover:bg-slate-600;
+    @apply bg-slate-300 rounded-full hover:bg-slate-400;
   }
 }
 
 @layer components {
   /* Navigation */
   .nav-link {
-    @apply text-slate-400 hover:text-white transition-colors text-sm font-medium;
+    @apply text-slate-600 hover:text-slate-950 transition-colors text-sm font-medium;
   }
 
   .nav-container {
-    @apply fixed top-0 left-0 right-0 z-50 bg-[#020617]/80 backdrop-blur-2xl border-b border-white/10;
+    @apply fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-2xl border-b border-slate-200/80 shadow-sm;
   }
 
   /* Logo */
@@ -44,11 +42,11 @@
   }
 
   .logo-icon {
-    @apply w-10 h-10 bg-gradient-to-r from-[#22d3ee] to-[#c084fc] rounded-lg flex items-center justify-center shadow-lg;
+    @apply w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center shadow-lg shadow-cyan-500/20;
   }
 
   .logo-text {
-    @apply text-lg font-bold text-white;
+    @apply text-lg font-bold text-slate-950;
   }
 
   .logo-subtext {
@@ -57,47 +55,47 @@
 
   /* Buttons */
   .btn-primary {
-    @apply px-6 py-2.5 bg-gradient-to-r from-[#22d3ee] to-[#c084fc] 
-           text-white font-semibold rounded-lg shadow-lg shadow-[#22d3ee]/20 
-           hover:shadow-[#c084fc]/40 hover:scale-105 transition-all duration-300 
+    @apply px-6 py-2.5 bg-gradient-to-r from-cyan-600 to-blue-600 
+           text-white font-semibold rounded-lg shadow-lg shadow-cyan-500/20 
+           hover:shadow-blue-500/30 hover:scale-105 transition-all duration-300 
            active:scale-95 text-sm;
   }
 
   .btn-outline {
-    @apply px-6 py-2.5 border border-white/10 rounded-lg 
-           text-slate-300 font-medium hover:bg-white/5 
-           hover:border-white/20 transition-all duration-300 text-sm;
+    @apply px-6 py-2.5 border border-slate-200 rounded-lg bg-white 
+           text-slate-700 font-medium hover:bg-slate-50 
+           hover:border-slate-300 transition-all duration-300 text-sm;
   }
 
   .btn-get-started {
-    @apply px-8 py-4 bg-gradient-to-r from-[#22d3ee] to-[#c084fc] 
-           text-white font-semibold rounded-xl shadow-lg shadow-[#22d3ee]/20 
-           hover:shadow-[#c084fc]/40 hover:scale-105 transition-all duration-300 
+    @apply px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 
+           text-white font-semibold rounded-xl shadow-lg shadow-cyan-500/20 
+           hover:shadow-blue-500/30 hover:scale-105 transition-all duration-300 
            active:scale-95 text-lg inline-flex items-center gap-2;
   }
 
   .btn-demo {
-    @apply px-8 py-4 bg-white/5 border border-white/10 
-           text-white font-semibold rounded-xl backdrop-blur-xl
-           hover:bg-white/10 hover:border-white/20 hover:scale-105 
+    @apply px-8 py-4 bg-white border border-slate-200 
+           text-slate-800 font-semibold rounded-xl backdrop-blur-xl shadow-sm
+           hover:bg-slate-50 hover:border-slate-300 hover:scale-105 
            transition-all duration-300 text-lg;
   }
 
   .btn-start {
-    @apply px-10 py-5 bg-gradient-to-r from-[#22d3ee] to-[#c084fc] 
-           text-white font-bold rounded-xl shadow-lg shadow-[#22d3ee]/20 
-           hover:shadow-[#c084fc]/40 hover:scale-105 transition-all duration-300 
+    @apply px-10 py-5 bg-gradient-to-r from-cyan-600 to-blue-600 
+           text-white font-bold rounded-xl shadow-lg shadow-cyan-500/20 
+           hover:shadow-blue-500/30 hover:scale-105 transition-all duration-300 
            text-xl inline-flex items-center gap-2;
   }
 
   /* Glass Cards */
   .glass-card {
-    @apply bg-[#0f172a]/50 backdrop-blur-xl border border-white/10 rounded-2xl shadow-xl 
-           hover:border-[#22d3ee]/30 transition-all duration-300;
+    @apply bg-white/85 backdrop-blur-xl border border-slate-200 rounded-2xl shadow-xl shadow-slate-200/70 
+           hover:border-cyan-300 transition-all duration-300;
   }
 
   .glass-panel {
-    @apply bg-[#0f172a]/40 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl;
+    @apply bg-white/90 backdrop-blur-xl border border-slate-200 rounded-2xl shadow-2xl shadow-slate-200/70;
   }
 
   /* Dashboard */
@@ -114,18 +112,27 @@
   }
 
   .progress-bar-bg {
-    @apply w-full h-2 bg-[#1e293b] rounded-full overflow-hidden;
+    @apply w-full h-2 bg-slate-200 rounded-full overflow-hidden;
   }
 
   .progress-bar-fill {
-    @apply h-full bg-gradient-to-r from-[#22d3ee] to-[#c084fc] rounded-full;
+    @apply h-full bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full;
   }
 
   /* Skill Pills */
   .skill-pill {
-    @apply flex items-center gap-2 px-4 py-3 bg-[#0f172a]/60 border border-white/10 rounded-xl
-           text-slate-300 text-sm hover:bg-[#1e293b]/80 hover:border-[#22d3ee]/50 
+    @apply flex items-center gap-2 px-4 py-3 bg-white border border-slate-200 rounded-xl
+           text-slate-700 text-sm hover:bg-cyan-50 hover:border-cyan-300 
            transition-all duration-300;
+  }
+
+  .upload-dropzone {
+    @apply relative min-h-[280px] rounded-2xl border-2 border-dashed border-slate-300 bg-white/85
+           p-8 text-center shadow-xl shadow-slate-200/70 transition-all duration-300;
+  }
+
+  .upload-dropzone:hover {
+    @apply border-cyan-300 bg-cyan-50/50;
   }
 
   /* Stats Cards */
@@ -151,16 +158,16 @@
   }
 
   .feature-icon {
-    @apply w-14 h-14 bg-gradient-to-br from-[#22d3ee] to-[#c084fc] rounded-xl 
+    @apply w-14 h-14 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl 
            flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300;
   }
 
   .feature-title {
-    @apply text-xl font-bold mb-3 group-hover:text-[#22d3ee] transition-colors;
+    @apply text-xl font-bold mb-3 group-hover:text-cyan-700 transition-colors;
   }
 
   .feature-desc {
-    @apply text-slate-400 leading-relaxed mb-4;
+    @apply text-slate-600 leading-relaxed mb-4;
   }
 
   .feature-tag {
@@ -168,11 +175,11 @@
   }
 
   .feature-tag-icon {
-    @apply w-4 h-4 text-[#22d3ee];
+    @apply w-4 h-4 text-cyan-600;
   }
 
   .feature-tag-text {
-    @apply text-[#22d3ee] font-semibold;
+    @apply text-cyan-700 font-semibold;
   }
 
   /* Steps */
@@ -186,13 +193,13 @@
 
   .step-number {
     @apply absolute -top-6 left-1/2 transform -translate-x-1/2 w-12 h-12 
-           bg-gradient-to-r from-[#22d3ee] to-[#c084fc] rounded-full 
+           bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full 
            flex items-center justify-center text-lg font-bold text-white;
   }
 
   .step-icon {
-    @apply w-16 h-16 bg-[#0f172a] rounded-xl flex items-center justify-center 
-           mx-auto mb-6 mt-4 text-[#22d3ee];
+    @apply w-16 h-16 bg-cyan-50 rounded-xl flex items-center justify-center 
+           mx-auto mb-6 mt-4 text-cyan-700;
   }
 
   .step-title {
@@ -200,7 +207,7 @@
   }
 
   .step-desc {
-    @apply text-slate-400 text-sm leading-relaxed;
+    @apply text-slate-600 text-sm leading-relaxed;
   }
 
   /* CTA Section */
@@ -213,16 +220,16 @@
   }
 
   .cta-subtitle {
-    @apply text-xl text-slate-400 mb-8 max-w-2xl mx-auto;
+    @apply text-xl text-slate-600 mb-8 max-w-2xl mx-auto;
   }
 
   .cta-note {
-    @apply text-sm text-slate-600 mt-4;
+    @apply text-sm text-slate-500 mt-4;
   }
 
   /* Footer */
   .footer {
-    @apply border-t border-white/10 py-12 px-6;
+    @apply border-t border-slate-200 py-12 px-6 bg-white/70;
   }
 
   .footer-container {
@@ -238,11 +245,11 @@
   }
 
   .footer-brand-text {
-    @apply text-sm text-slate-500 mt-4 leading-relaxed;
+    @apply text-sm text-slate-600 mt-4 leading-relaxed;
   }
 
   .footer-title {
-    @apply font-semibold mb-4 text-[#22d3ee] text-sm;
+    @apply font-semibold mb-4 text-cyan-700 text-sm;
   }
 
   .footer-links {
@@ -250,7 +257,7 @@
   }
 
   .footer-link {
-    @apply text-slate-500 hover:text-white transition-colors block;
+    @apply text-slate-600 hover:text-slate-950 transition-colors block;
   }
 
   .footer-social {
@@ -259,20 +266,20 @@
 
   .footer-social-icon {
     @apply w-10 h-10 glass-card flex items-center justify-center 
-           hover:border-[#22d3ee]/50 transition-all;
+           hover:border-cyan-300 transition-all;
   }
 
   .footer-bottom {
-    @apply border-t border-white/10 pt-8 text-center text-sm text-slate-600;
+    @apply border-t border-slate-200 pt-8 text-center text-sm text-slate-500;
   }
 
   /* Gradient Text */
   .gradient-text {
-    @apply bg-gradient-to-r from-[#22d3ee] via-[#f472b6] to-[#c084fc] bg-clip-text text-transparent font-bold;
+    @apply bg-gradient-to-r from-cyan-700 via-blue-600 to-indigo-600 bg-clip-text text-transparent font-bold;
   }
 
   .gradient-heading {
-    @apply bg-gradient-to-r from-[#22d3ee] via-[#f472b6] to-[#c084fc] bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-cyan-700 via-blue-600 to-indigo-600 bg-clip-text text-transparent;
   }
 
   /* Badges */
@@ -286,11 +293,11 @@
   }
 
   .orb-1 {
-    @apply w-[500px] h-[500px] bg-[#22d3ee] top-[-10%] left-[-10%];
+    @apply w-[500px] h-[500px] bg-cyan-200 top-[-10%] left-[-10%];
   }
 
   .orb-2 {
-    @apply w-[500px] h-[500px] bg-[#c084fc] bottom-[-10%] right-[-5%] delay-4000;
+    @apply w-[500px] h-[500px] bg-blue-200 bottom-[-10%] right-[-5%] delay-4000;
   }
 }
 
@@ -309,7 +316,105 @@
   }
 
   @keyframes pulse-slow {
-    0%, 100% { opacity: 0.15; }
-    50% { opacity: 0.25; }
+    0%, 100% { opacity: 0.08; }
+    50% { opacity: 0.14; }
   }
+}
+
+/* Light theme normalizers for older dark utility classes used across pages. */
+[class*="bg-[#020617]"],
+[class*="bg-[#0B1026]"],
+[class*="bg-[#0a0f1f]"] {
+  background-color: #f8fafc !important;
+}
+
+[class*="bg-[#0f172a]"],
+[class*="bg-[#11172F]"],
+[class*="bg-[#1E293B]"],
+[class*="bg-[#1e293b]"],
+[class*="bg-slate-800"],
+[class*="bg-slate-700"] {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.bg-white\/5,
+.bg-white\/10,
+.hover\:bg-white\/5:hover,
+.hover\:bg-white\/10:hover {
+  background-color: rgba(255, 255, 255, 0.78) !important;
+}
+
+.border-white\/10,
+.border-white\/20,
+.border-white\/30,
+.hover\:border-white\/20:hover {
+  border-color: #e2e8f0 !important;
+}
+
+.text-white {
+  color: #0f172a !important;
+}
+
+.text-slate-200,
+.text-slate-300 {
+  color: #334155 !important;
+}
+
+.text-slate-400 {
+  color: #475569 !important;
+}
+
+.text-slate-500,
+.text-slate-600 {
+  color: #64748b !important;
+}
+
+.text-cyan-300,
+.text-cyan-400 {
+  color: #0e7490 !important;
+}
+
+.text-purple-400 {
+  color: #6d28d9 !important;
+}
+
+.hover\:text-white:hover {
+  color: #0f172a !important;
+}
+
+button.text-white,
+a.text-white,
+button[class*="bg-cyan-500"],
+button[class*="bg-cyan-600"],
+button[class*="bg-blue-500"],
+button[class*="bg-blue-600"],
+button[class*="bg-purple-600"],
+a[class*="bg-cyan-500"],
+a[class*="bg-cyan-600"],
+a[class*="bg-blue-500"],
+a[class*="bg-blue-600"],
+a[class*="bg-purple-600"],
+.btn-primary,
+.btn-primary *,
+.btn-get-started,
+.btn-get-started *,
+.btn-start,
+.btn-start *,
+.logo-icon .text-white,
+.feature-icon .text-white,
+.step-number,
+.step-number *,
+[class*="bg-gradient-to"].text-white {
+  color: #ffffff !important;
+}
+
+input,
+textarea,
+select {
+  color: #0f172a;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #94a3b8;
 }
