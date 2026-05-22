@@ -17,6 +17,7 @@ import emailjs from '@emailjs/browser';
 const EMAILJS_PUBLIC_KEY = 'lkI2h92ewhmEqmfa-';
 const EMAILJS_SERVICE_ID = 'service_ntk3zmm';
 const EMAILJS_TEMPLATE_ID = 'template_k8af0bf';
+const EMAIL_SENDER_NAME = 'Bridge-AI Team';
 // ==================================================
 
 // Initialize EmailJS
@@ -72,9 +73,17 @@ const SignUp = () => {
     // Prepare email template parameters
     const templateParams = {
       email: emailAddress,
-  
+      to_email: emailAddress,
+      to_name: 'Bridge-AI User',
+      from_name: EMAIL_SENDER_NAME,
+      sender_name: EMAIL_SENDER_NAME,
+      team_name: EMAIL_SENDER_NAME,
+      app_name: 'Bridge-AI',
+      subject: 'Your Bridge-AI verification code',
       otp: otpCode,
-
+      passcode: otpCode,
+      verification_code: otpCode,
+      message: `Your Bridge-AI verification code is ${otpCode}. This code was sent by the Bridge-AI Team.`,
     };
 
     // ✅ FIXED: Added 4th parameter (Public Key)
